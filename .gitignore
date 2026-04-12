@@ -1,0 +1,102 @@
+# OSX
+#
+.DS_Store
+
+# Xcode
+#
+build/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+*.xccheckout
+*.moved-aside
+DerivedData
+*.hmap
+*.ipa
+*.xcuserstate
+project.xcworkspace
+
+# Android/IntelliJ
+#
+build/
+.idea
+.gradle
+local.properties
+*.iml
+*.hprof
+.cxx/
+*.keystore
+!debug.keystore
+
+# Flutter
+#
+flutter_*.png
+*.lock
+
+# Packages
+#
+.packages
+
+# Pub
+#
+.pub/
+
+# Dart
+#
+.dart_tool/
+
+# VS Code
+#
+.vscode/
+
+# Android Studio
+#
+.idea/
+
+# Temporary files
+#
+*.swp
+*.swo
+*~
+
+# Log files
+#
+*.log
+
+# Environment variables
+#
+.env
+.env.local
+.env.*.local
+
+# Test coverage
+#
+coverage/
+
+# Build outputs
+#
+build/
+
+# Flutter web
+#
+build/web/
+
+# iOS
+#
+ios/Runner.xcworkspace/
+ios/Runner.xcworkspace/xcuserdata/
+
+# Android
+#
+android/app/build/
+android/build/
+android/gradle/
+android/gradle.properties
+android/local.properties
+android/settings.gradle
