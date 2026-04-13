@@ -48,9 +48,6 @@ void main() async {
   // 获取单个账单详情
   router.get('/api/bills/<id>', (Request request, String id) {
     final bill = bills.firstWhere((bill) => bill['id'] == id, orElse: () => null);
-    if (bill == null) {
-      return Response.notFound('Bill not found');
-    }
     return Response.ok(
       '$bill',
       headers: {'Content-Type': 'application/json'},

@@ -81,16 +81,18 @@ class _AddPlanScreenState extends State<AddPlanScreen> {
                         });
                       },
                       child: Container(
-                        padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 16),
+                        padding: const EdgeInsets.symmetric(
+                            vertical: 10, horizontal: 16),
                         decoration: BoxDecoration(
-                          color: _selectedCategory == 0 
-                              ? const Color(0xFFFFFFFF) 
+                          color: _selectedCategory == 0
+                              ? const Color(0xFFFFFFFF)
                               : Colors.transparent,
                           borderRadius: BorderRadius.circular(999),
-                          boxShadow: _selectedCategory == 0 
+                          boxShadow: _selectedCategory == 0
                               ? [
                                   BoxShadow(
-                                    color: const Color(0xFF313330).withOpacity(0.04),
+                                    color: const Color(0xFF313330)
+                                        .withOpacity(0.04),
                                     spreadRadius: 0,
                                     blurRadius: 12,
                                     offset: const Offset(0, 4),
@@ -103,8 +105,8 @@ class _AddPlanScreenState extends State<AddPlanScreen> {
                           style: TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.w500,
-                            color: _selectedCategory == 0 
-                                ? const Color(0xFF52616B) 
+                            color: _selectedCategory == 0
+                                ? const Color(0xFF52616B)
                                 : const Color(0xFF5E5F5C),
                           ),
                         ),
@@ -117,16 +119,18 @@ class _AddPlanScreenState extends State<AddPlanScreen> {
                         });
                       },
                       child: Container(
-                        padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 16),
+                        padding: const EdgeInsets.symmetric(
+                            vertical: 10, horizontal: 16),
                         decoration: BoxDecoration(
-                          color: _selectedCategory == 1 
-                              ? const Color(0xFFFFFFFF) 
+                          color: _selectedCategory == 1
+                              ? const Color(0xFFFFFFFF)
                               : Colors.transparent,
                           borderRadius: BorderRadius.circular(999),
-                          boxShadow: _selectedCategory == 1 
+                          boxShadow: _selectedCategory == 1
                               ? [
                                   BoxShadow(
-                                    color: const Color(0xFF313330).withOpacity(0.04),
+                                    color: const Color(0xFF313330)
+                                        .withOpacity(0.04),
                                     spreadRadius: 0,
                                     blurRadius: 12,
                                     offset: const Offset(0, 4),
@@ -139,8 +143,8 @@ class _AddPlanScreenState extends State<AddPlanScreen> {
                           style: TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.w500,
-                            color: _selectedCategory == 1 
-                                ? const Color(0xFF52616B) 
+                            color: _selectedCategory == 1
+                                ? const Color(0xFF52616B)
                                 : const Color(0xFF5E5F5C),
                           ),
                         ),
@@ -153,16 +157,18 @@ class _AddPlanScreenState extends State<AddPlanScreen> {
                         });
                       },
                       child: Container(
-                        padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 16),
+                        padding: const EdgeInsets.symmetric(
+                            vertical: 10, horizontal: 16),
                         decoration: BoxDecoration(
-                          color: _selectedCategory == 2 
-                              ? const Color(0xFFFFFFFF) 
+                          color: _selectedCategory == 2
+                              ? const Color(0xFFFFFFFF)
                               : Colors.transparent,
                           borderRadius: BorderRadius.circular(999),
-                          boxShadow: _selectedCategory == 2 
+                          boxShadow: _selectedCategory == 2
                               ? [
                                   BoxShadow(
-                                    color: const Color(0xFF313330).withOpacity(0.04),
+                                    color: const Color(0xFF313330)
+                                        .withOpacity(0.04),
                                     spreadRadius: 0,
                                     blurRadius: 12,
                                     offset: const Offset(0, 4),
@@ -175,8 +181,8 @@ class _AddPlanScreenState extends State<AddPlanScreen> {
                           style: TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.w500,
-                            color: _selectedCategory == 2 
-                                ? const Color(0xFF52616B) 
+                            color: _selectedCategory == 2
+                                ? const Color(0xFF52616B)
                                 : const Color(0xFF5E5F5C),
                           ),
                         ),
@@ -233,7 +239,6 @@ class _AddPlanScreenState extends State<AddPlanScreen> {
 
             // Dynamic Content Area
             Column(
-              spaceBetween: 24,
               children: [
                 // Items Checklist Card
                 Container(
@@ -292,7 +297,6 @@ class _AddPlanScreenState extends State<AddPlanScreen> {
                       ),
                       const SizedBox(height: 24),
                       Column(
-                        spaceBetween: 16,
                         children: _items.map((item) {
                           return Row(
                             children: [
@@ -302,7 +306,8 @@ class _AddPlanScreenState extends State<AddPlanScreen> {
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(8),
                                   border: Border.all(
-                                    color: const Color(0xFFB2B2AE).withOpacity(0.3),
+                                    color: const Color(0xFFB2B2AE)
+                                        .withOpacity(0.3),
                                     width: 2,
                                   ),
                                 ),
@@ -310,21 +315,24 @@ class _AddPlanScreenState extends State<AddPlanScreen> {
                               const SizedBox(width: 16),
                               Expanded(
                                 child: Container(
-                                  padding: const EdgeInsets.symmetric(vertical: 4),
-                                  decoration: const BoxDecoration(
+                                  padding:
+                                      const EdgeInsets.symmetric(vertical: 4),
+                                  decoration: BoxDecoration(
                                     border: Border(
                                       bottom: BorderSide(
-                                        color: Color(0xFFB2B2AE),
-                                        opacity: 0.1,
+                                        color:
+                                            Color(0xFFB2B2AE).withOpacity(0.1),
                                       ),
                                     ),
                                   ),
                                   child: Text(
                                     item['name'],
                                     style: TextStyle(
-                                      color: item['completed'] 
-                                          ? const Color(0xFF5E5F5C).withOpacity(0.4) 
-                                          : const Color(0xFF313330).withOpacity(0.8),
+                                      color: item['completed']
+                                          ? const Color(0xFF5E5F5C)
+                                              .withOpacity(0.4)
+                                          : const Color(0xFF313330)
+                                              .withOpacity(0.8),
                                       // fontFamily: 'Noto Sans SC',
                                     ),
                                   ),
@@ -382,7 +390,8 @@ class _AddPlanScreenState extends State<AddPlanScreen> {
                               Text(
                                 'Execution Date',
                                 style: TextStyle(
-                                  color: const Color(0xFF5E5F5C).withOpacity(0.4),
+                                  color:
+                                      const Color(0xFF5E5F5C).withOpacity(0.4),
                                   fontSize: 10,
                                   fontWeight: FontWeight.bold,
                                   letterSpacing: 0.1,
@@ -465,7 +474,7 @@ class _AddPlanScreenState extends State<AddPlanScreen> {
                                 style: TextStyle(
                                   color: const Color(0xFF525F50),
                                   fontSize: 14,
-                                  lineHeight: 1.5,
+                                  height: 1.5,
                                   // fontFamily: 'Noto Sans SC',
                                 ),
                               ),
@@ -481,7 +490,8 @@ class _AddPlanScreenState extends State<AddPlanScreen> {
                           });
                         },
                         activeColor: const Color(0xFF556354),
-                        inactiveTrackColor: const Color(0xFFB2B2AE).withOpacity(0.2),
+                        inactiveTrackColor:
+                            const Color(0xFFB2B2AE).withOpacity(0.2),
                       ),
                     ],
                   ),
@@ -533,7 +543,9 @@ extension ColumnExtension on Column {
       mainAxisAlignment: mainAxisAlignment,
       crossAxisAlignment: crossAxisAlignment,
       mainAxisSize: mainAxisSize,
-      children: children.expand((child) => [child, SizedBox(height: space)]).toList()..removeLast(),
+      children:
+          children.expand((child) => [child, SizedBox(height: space)]).toList()
+            ..removeLast(),
     );
   }
 }

@@ -65,7 +65,6 @@ class _PrivacySecurityScreenState extends State<PrivacySecurityScreen> {
 
             // Main Settings List
             Column(
-              spaceBetween: 16,
               children: [
                 // Biometric Section
                 Container(
@@ -317,7 +316,7 @@ class _PrivacySecurityScreenState extends State<PrivacySecurityScreen> {
                                 style: TextStyle(
                                   color: const Color(0xFF5E5F5C),
                                   fontSize: 14,
-                                  lineHeight: 1.5,
+                                  height: 1.5,
                                 ),
                               ),
                             ],
@@ -426,7 +425,9 @@ extension ColumnExtension on Column {
       mainAxisAlignment: mainAxisAlignment,
       crossAxisAlignment: crossAxisAlignment,
       mainAxisSize: mainAxisSize,
-      children: children.expand((child) => [child, SizedBox(height: space)]).toList()..removeLast(),
+      children:
+          children.expand((child) => [child, SizedBox(height: space)]).toList()
+            ..removeLast(),
     );
   }
 }

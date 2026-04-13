@@ -82,7 +82,7 @@ class _BillDetailScreenState extends State<BillDetailScreen> {
               '-168.00',
               style: TextStyle(
                 color: Color(0xFF313330),
-                fontWeight: FontWeight.extraBold,
+                fontWeight: FontWeight.w800,
                 fontSize: 40,
                 letterSpacing: -0.5,
               ),
@@ -91,9 +91,8 @@ class _BillDetailScreenState extends State<BillDetailScreen> {
             Text(
               '2023年11月24日 19:32',
               style: TextStyle(
-                color: Color(0xFF5E5F5C),
+                color: Color(0xFF5E5F5C).withOpacity(0.7),
                 fontSize: 14,
-                opacity: 0.7,
               ),
             ),
             const SizedBox(height: 40),
@@ -109,7 +108,6 @@ class _BillDetailScreenState extends State<BillDetailScreen> {
                       borderRadius: BorderRadius.circular(12),
                     ),
                     child: Column(
-                      spaceBetween: 16,
                       children: [
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -132,6 +130,7 @@ class _BillDetailScreenState extends State<BillDetailScreen> {
                             ),
                           ],
                         ),
+                        const SizedBox(height: 16),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -170,7 +169,8 @@ class _BillDetailScreenState extends State<BillDetailScreen> {
                       runSpacing: 8,
                       children: [
                         Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 16, vertical: 6),
                           decoration: BoxDecoration(
                             color: const Color(0xFFFEEEE0).withOpacity(0.3),
                             borderRadius: BorderRadius.circular(999),
@@ -199,7 +199,8 @@ class _BillDetailScreenState extends State<BillDetailScreen> {
                           ),
                         ),
                         Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 16, vertical: 6),
                           decoration: BoxDecoration(
                             color: const Color(0xFFFEEEE0).withOpacity(0.3),
                             borderRadius: BorderRadius.circular(999),
@@ -228,7 +229,8 @@ class _BillDetailScreenState extends State<BillDetailScreen> {
                           ),
                         ),
                         Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 12, vertical: 6),
                           decoration: BoxDecoration(
                             color: const Color(0xFF52616B).withOpacity(0.1),
                             borderRadius: BorderRadius.circular(999),
@@ -284,43 +286,48 @@ class _BillDetailScreenState extends State<BillDetailScreen> {
                   Text(
                     '"和老友在静安寺附近的意式餐厅叙旧，氛围很好，手工意面味道正宗。"',
                     style: TextStyle(
-                      color: const Color(0xFF313330),
+                      color: const Color(0xFF313330).withOpacity(0.9),
                       fontSize: 14,
                       fontStyle: FontStyle.italic,
-                      opacity: 0.9,
-                      lineHeight: 1.5,
+                      height: 1.5,
                     ),
                   ),
                   const SizedBox(height: 24),
                   Row(
                     children: [
                       Expanded(
-                        child: Container(
-                          aspectRatio: 4/3,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            border: Border.all(
-                              color: const Color(0xFFB2B2AE).withOpacity(0.1),
-                            ),
-                            image: const DecorationImage(
-                              image: NetworkImage('https://lh3.googleusercontent.com/aida-public/AB6AXuDtTzKtAnQUpZeyqXf1mF347NPdF7vsyGZ7vOKpr8wAetwBfQSdjwUwS8sFTrIkvx2L4DDIMxWVYD3otNFwUbO02cXQFrBK6N5SZF0L8652gBNWpOHz2jtwAat109z4xdDqBwwormGNXI1re4cZn818TeUsbROWZGQf8pocXwJdQwHqZNG8H8vEYtsHTeFt6DfBXiFJMvQaas92rr886gQw_tfecCgLBVAYUrLAANxJLhhki1BumtZC_g7kkFaBlN6wAPAOj88flaM'),
-                              fit: BoxFit.cover,
+                        child: AspectRatio(
+                          aspectRatio: 4 / 3,
+                          child: Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(8),
+                              border: Border.all(
+                                color: const Color(0xFFB2B2AE).withOpacity(0.1),
+                              ),
+                              image: const DecorationImage(
+                                image: NetworkImage(
+                                    'https://lh3.googleusercontent.com/aida-public/AB6AXuDtTzKtAnQUpZeyqXf1mF347NPdF7vsyGZ7vOKpr8wAetwBfQSdjwUwS8sFTrIkvx2L4DDIMxWVYD3otNFwUbO02cXQFrBK6N5SZF0L8652gBNWpOHz2jtwAat109z4xdDqBwwormGNXI1re4cZn818TeUsbROWZGQf8pocXwJdQwHqZNG8H8vEYtsHTeFt6DfBXiFJMvQaas92rr886gQw_tfecCgLBVAYUrLAANxJLhhki1BumtZC_g7kkFaBlN6wAPAOj88flaM'),
+                                fit: BoxFit.cover,
+                              ),
                             ),
                           ),
                         ),
                       ),
                       const SizedBox(width: 12),
                       Expanded(
-                        child: Container(
-                          aspectRatio: 4/3,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            border: Border.all(
-                              color: const Color(0xFFB2B2AE).withOpacity(0.1),
-                            ),
-                            image: const DecorationImage(
-                              image: NetworkImage('https://lh3.googleusercontent.com/aida-public/AB6AXuDZiW9cCC3GeastLbE1TT8Lu3sr8zX5vtSw_UvGYZLtRuYeEqnCGcfC7nGcYCjjhCzx0cf-EiI4Ck1WnDcgmKkSLxW80nlLfhlEc6II9fvBf4xV-wX7yRU66PdHaejTmYEGatNLLK_phMu3zL-zzJqwEXtmsiQvLcubhDOMbckduZDQLcs97-ju3TIfPHjUhmVucd5eq-LlQaq91j8R0vaoKsMieMG3l0tVKmk9O4YCmhgc2ly_5xw8qFeBlhqhryy2EfbSA2n3MhU'),
-                              fit: BoxFit.cover,
+                        child: AspectRatio(
+                          aspectRatio: 4 / 3,
+                          child: Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(8),
+                              border: Border.all(
+                                color: const Color(0xFFB2B2AE).withOpacity(0.1),
+                              ),
+                              image: const DecorationImage(
+                                image: NetworkImage(
+                                    'https://lh3.googleusercontent.com/aida-public/AB6AXuDZiW9cCC3GeastLbE1TT8Lu3sr8zX5vtSw_UvGYZLtRuYeEqnCGcfC7nGcYCjjhCzx0cf-EiI4Ck1WnDcgmKkSLxW80nlLfhlEc6II9fvBf4xV-wX7yRU66PdHaejTmYEGatNLLK_phMu3zL-zzJqwEXtmsiQvLcubhDOMbckduZDQLcs97-ju3TIfPHjUhmVucd5eq-LlQaq91j8R0vaoKsMieMG3l0tVKmk9O4YCmhgc2ly_5xw8qFeBlhqhryy2EfbSA2n3MhU'),
+                                fit: BoxFit.cover,
+                              ),
                             ),
                           ),
                         ),
@@ -367,10 +374,9 @@ class _BillDetailScreenState extends State<BillDetailScreen> {
                       ),
                     ),
                   ),
-                  const Icon(
+                  Icon(
                     Icons.location_on,
-                    color: Color(0xFF5E5F5C),
-                    opacity: 0.4,
+                    color: Color(0xFF5E5F5C).withOpacity(0.4),
                   ),
                 ],
               ),
@@ -444,7 +450,9 @@ extension ColumnExtension on Column {
       mainAxisAlignment: mainAxisAlignment,
       crossAxisAlignment: crossAxisAlignment,
       mainAxisSize: mainAxisSize,
-      children: children.expand((child) => [child, SizedBox(height: space)]).toList()..removeLast(),
+      children:
+          children.expand((child) => [child, SizedBox(height: space)]).toList()
+            ..removeLast(),
     );
   }
 }

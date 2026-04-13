@@ -8,7 +8,8 @@ class ProfileScreen extends StatefulWidget {
 }
 
 class _ProfileScreenState extends State<ProfileScreen> {
-  TextEditingController _nicknameController = TextEditingController(text: 'Alex Rivera');
+  TextEditingController _nicknameController =
+      TextEditingController(text: 'Alex Rivera');
 
   @override
   Widget build(BuildContext context) {
@@ -173,10 +174,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 const SizedBox(height: 8),
                 Row(
                   children: [
-                    const Icon(
+                    Icon(
                       Icons.calendar_today,
-                      color: Color(0xFF5E5F5C),
-                      opacity: 0.4,
+                      color: Color(0xFF5E5F5C).withOpacity(0.4),
                     ),
                     const SizedBox(width: 12),
                     Text(
@@ -284,14 +284,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             borderRadius: BorderRadius.circular(999),
                           ),
                           padding: const EdgeInsets.symmetric(vertical: 16),
-                          boxShadow: [
-                            BoxShadow(
-                              color: const Color(0xFF52616B).withOpacity(0.15),
-                              spreadRadius: 0,
-                              blurRadius: 32,
-                              offset: const Offset(0, 8),
-                            ),
-                          ],
+                          shadowColor:
+                              const Color(0xFF52616B).withOpacity(0.15),
                         ),
                         child: const Text(
                           '保存更改',
