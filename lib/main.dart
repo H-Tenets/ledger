@@ -3,6 +3,7 @@ import 'package:wallet_app/screens/privacy_security_screen.dart';
 import 'package:wallet_app/screens/bill_detail_screen.dart';
 import 'package:wallet_app/screens/profile_screen.dart';
 import 'package:wallet_app/screens/add_plan_screen.dart';
+import 'package:wallet_app/screens/dashboard_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -30,61 +31,12 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
-        '/': (context) => const HomeScreen(),
+        '/': (context) => const DashboardScreen(),
         '/privacy': (context) => const PrivacySecurityScreen(),
         '/bill-detail': (context) => const BillDetailScreen(),
         '/profile': (context) => const ProfileScreen(),
         '/add-plan': (context) => const AddPlanScreen(),
       },
-    );
-  }
-}
-
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Miaoji'),
-        backgroundColor: const Color(0xFFFBF9F6),
-        elevation: 0,
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            ElevatedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, '/privacy');
-              },
-              child: const Text('隐私与安全'),
-            ),
-            const SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, '/bill-detail');
-              },
-              child: const Text('账单详情'),
-            ),
-            const SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, '/profile');
-              },
-              child: const Text('个人设置'),
-            ),
-            const SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, '/add-plan');
-              },
-              child: const Text('新增计划'),
-            ),
-          ],
-        ),
-      ),
     );
   }
 }
