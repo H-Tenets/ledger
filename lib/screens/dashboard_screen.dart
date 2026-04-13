@@ -284,6 +284,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
               break;
             case 1:
               // 交易
+              Navigator.pushNamed(context, '/transactions');
               break;
             case 2:
               // 计划
