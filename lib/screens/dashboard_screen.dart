@@ -230,7 +230,12 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   },
                   child: _buildQuickAction(Icons.send, '转账', const Color(0xFFD5E5F1), const Color(0xFF52616B)),
                 ),
-                _buildQuickAction(Icons.qr_code_scanner, '扫码', const Color(0xFFD8E7D4), const Color(0xFF556354)),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, '/budget');
+                  },
+                  child: _buildQuickAction(Icons.account_balance_wallet, '预算', const Color(0xFFD8E7D4), const Color(0xFF556354)),
+                ),
                 GestureDetector(
                   onTap: () {
                     Navigator.pushNamed(context, '/receive');
