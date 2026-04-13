@@ -6,6 +6,7 @@ import 'package:wallet_app/screens/add_plan_screen.dart';
 import 'package:wallet_app/screens/dashboard_screen.dart';
 import 'package:wallet_app/screens/transactions_screen.dart';
 import 'package:wallet_app/screens/transfer_screen.dart';
+import 'package:wallet_app/screens/receive_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -40,6 +41,7 @@ class MyApp extends StatelessWidget {
         '/add-plan': (context) => const AddPlanScreen(),
         '/transactions': (context) => const TransactionsScreen(),
         '/transfer': (context) => const TransferScreen(),
+        '/receive': (context) => const ReceiveScreen(),
       },
     );
   }
