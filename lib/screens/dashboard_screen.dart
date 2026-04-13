@@ -224,7 +224,12 @@ class _DashboardScreenState extends State<DashboardScreen> {
               crossAxisSpacing: 16,
               mainAxisSpacing: 16,
               children: [
-                _buildQuickAction(Icons.send, '转账', const Color(0xFFD5E5F1), const Color(0xFF52616B)),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, '/transfer');
+                  },
+                  child: _buildQuickAction(Icons.send, '转账', const Color(0xFFD5E5F1), const Color(0xFF52616B)),
+                ),
                 _buildQuickAction(Icons.qr_code_scanner, '扫码', const Color(0xFFD8E7D4), const Color(0xFF556354)),
                 _buildQuickAction(Icons.receipt, '收款', const Color(0xFFFEEEE0), const Color(0xFF685D53)),
                 _buildQuickAction(Icons.add, '新增', const Color(0xFFE8D8F0), const Color(0xFF6E5A7A)),
